@@ -1,0 +1,11 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: test-ingress
+  namespace: demo
+spec:
+  defaultBackend:
+    service:
+      name: nginx-service5
+      port:
+        number: 80
