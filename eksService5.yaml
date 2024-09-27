@@ -2,6 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: nginx-service5
+  namespace: demo
 spec:
   selector:
     app: nginx
