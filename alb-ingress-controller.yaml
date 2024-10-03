@@ -21,5 +21,5 @@ spec:
         - --cluster-name=eksTestCluster
         - --aws-vpc-id=vpc-018906cab60cf165b
         - --aws-region=ca-central-1
-        image: docker.io/amazon/aws-alb-ingress-controller:v1.1.6
+        image: docker.io/amazon/aws-alb-ingress-controller:v2.4.5
       serviceAccountName: alb-ingress-controller
