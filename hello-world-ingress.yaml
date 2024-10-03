@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hello-world-ingress
+  namespace: demo
   annotations:
     alb.ingress.kubernetes.io/scheme: internal  # This makes the ALB internal-facing
     alb.ingress.kubernetes.io/target-type: ip
