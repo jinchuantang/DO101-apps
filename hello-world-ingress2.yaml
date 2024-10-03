@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: hello-world-ingress
+  namespace: demo
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internal  # This makes the ALB internal-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/subnets: subnet-048e25be105ae01d3,subnet-0896ff158c3ecdc53  # Ensure these are private subnets
+spec:
+  rules:
+    - host: hello-world.internal.yourdomain.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-world-service
+                port:
+                  number: 80
