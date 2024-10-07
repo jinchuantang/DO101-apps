@@ -5498,7 +5498,7 @@ spec:
           ports:
           - name: https
             protocol: TCP
-            containerPort: 10250
+            containerPort: 10260
           - name: healthcheck
             protocol: TCP
             containerPort: 6080
