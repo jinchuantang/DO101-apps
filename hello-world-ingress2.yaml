@@ -8,9 +8,10 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/subnets: subnet-048e25be105ae01d3,subnet-0896ff158c3ecdc53  # Ensure these are private subnets
 spec:
+  ingressClassName: alb
   rules:
-    - host: hello-world.internal.yourdomain.com
-      http:
+#    - host: hello-world.internal.yourdomain.com
+    - http:
         paths:
           - path: /
             pathType: Prefix
