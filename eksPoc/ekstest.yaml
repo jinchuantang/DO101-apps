@@ -8,12 +8,12 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: app-deployment
   namespace: demo
   labels:
     app: nginx
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -24,6 +24,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: public.ecr.aws/t1f2w6h8/ekswelcome:v1
+          image: 075458558257.dkr.ecr.ca-central-1.amazonaws.com/nginx:0.1a 
           ports:
             - containerPort: 80
