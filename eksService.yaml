@@ -1,8 +1,14 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo
+---
 apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  #namespace: demo
+  namespace: demo
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-internal: "true"
   labels:
