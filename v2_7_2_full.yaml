@@ -866,7 +866,7 @@ spec:
     spec:
       containers:
       - args:
-        - --cluster-name=eksTestCluster
+        - --cluster-name=eks-test-cluster
         - --ingress-class=alb
 	- --aws-vpc-id=vpc-018906cab60cf165b
 	- --aws-region=ca-central-1
