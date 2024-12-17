@@ -868,8 +868,8 @@ spec:
       - args:
         - --cluster-name=eks-test-cluster
         - --ingress-class=alb
-	- --aws-vpc-id=vpc-018906cab60cf165b
-	- --aws-region=ca-central-1
+        - --aws-vpc-id=vpc-018906cab60cf165b
+        - --aws-region=ca-central-1
         image: public.ecr.aws/eks/aws-load-balancer-controller:v2.7.2
         livenessProbe:
           failureThreshold: 2
