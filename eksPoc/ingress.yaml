@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: my-app-ingress2
+  name: my-app-ingress
   namespace: demo
   annotations:
     kubernetes.io/ingress.class: "alb"
