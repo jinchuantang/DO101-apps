@@ -4,11 +4,16 @@ metadata:
   name: my-app-ingress
   namespace: demo
   annotations:
-    kubernetes.io/ingress.class: "alb"
     alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
 spec:
+  ingressClassName: alb
+  defaultBackend:
+    service:
+      name: my-app-service
+      port:
+        number: 80
   rules:
   - host: my-app.internal.example.com
     http:
