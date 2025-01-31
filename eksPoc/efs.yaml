@@ -10,4 +10,4 @@ parameters:
   directoryPerms: "777"
   gidRangeStart: "1000"
   gidRangeEnd: "2000"
-  basePath: "/contents"
+#  basePath: "/contents"
