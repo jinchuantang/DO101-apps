@@ -11,3 +11,18 @@ parameters:
   gidRangeStart: "1000"
   gidRangeEnd: "2000"
 #  basePath: "/contents"
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: efs-pvc
+  namespace: ceu
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Mi
+  storageClassName: efs-sc
+
