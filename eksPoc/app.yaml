@@ -25,6 +25,13 @@ spec:
         image: 075458558257.dkr.ecr.ca-central-1.amazonaws.com/nginx:2.3
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: efs-storage
+          mountPath: /contents
+      volumes:
+      - name: efs-storage
+        persistentVolumeClaim:
+          claimName: efs-pvc
 ---
 apiVersion: v1
 kind: Service
